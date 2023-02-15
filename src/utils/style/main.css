@@ -168,8 +168,8 @@ body {
 /***********************/
 
 .singleproduct {
-  margin: 0 auto;
-  width: 1240px;
+  margin: 43px auto;
+  width: 95%;
   color: #ff6060;
 }
 
@@ -177,43 +177,50 @@ body {
   display: flex;
   justify-content: space-between;
   margin-bottom: 15px;
-  margin-top: 20px;
+}
+
+.singleproduct_informations {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 500;
+  gap: 10px;
 }
 
 .singleproduct_title {
   margin: 0;
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 500;
 }
 
 .singleproduct_location {
-  font-size: 18px;
-  font-weight: 500;
+  margin: 0;
 }
 
 .singleproduct_tags {
   display: flex;
   flex-wrap: wrap;
+  gap: 10px;
 }
 
 .singleproduct_rating-and-host {
-  margin-top: 5px;
-  margin-bottom: 20px;
+  gap: 5px;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
 }
 
 .singleproduct_dropdowns {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 80px;
+  display: flex;
+  justify-content: space-between;
+  gap: 70px;
+  margin: 30px auto;
 }
 
 /* Slider */
 
 .slider {
   position: relative;
+  margin: 43px auto;
 }
 
 .slider_active-picture {
@@ -258,8 +265,19 @@ body {
 
 .slider_next-icon,
 .slider_previous-icon {
-  height: 50px;
+  height: 15%;
   filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
+}
+
+.slider_count {
+  position: absolute;
+  margin: 0;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-weight: 500;
+  font-size: clamp(14px, 2vw, 18px);
 }
 
 /* Tag */
@@ -268,10 +286,9 @@ body {
   background: #ff6060;
   border-radius: 10px;
   color: #fff;
-  padding: 5px 14px;
+  padding: 5px 15px;
   margin-right: 10px;
-  margin-bottom: 10px;
-  min-width: 68px;
+  display: inline;
   text-align: center;
 }
 
@@ -299,12 +316,15 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  gap: 10px;
 }
 
 .server_name {
-  font-size: 18px;
-  font-weight: 500;
-  margin-right: 10px;
+  gap: 0 10px;
+  justify-content: flex-end;
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
 }
 
 .server_name p {
@@ -361,15 +381,15 @@ body {
 /****************/
 
 .about {
-  margin: 0 5%;
+  margin: 43px auto;
 }
 
 .banner {
   border-radius: 25px;
   position: relative;
-  margin: 20px auto;
+  margin: 43px auto;
   height: 223px;
-  width: 1240px;
+  max-width: 95%;
   animation: fadeIn 500ms ease-in-out;
 }
 
@@ -391,15 +411,13 @@ body {
 }
 
 .about_dropdowns {
-  width: 1023px;
-  text-align: auto;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  width: 95%;
 }
 
 .collapse {
   color: #fff;
-  margin-bottom: 20px;
+  width: 50%;
 }
 
 .collapse:nth-of-type(1) {
@@ -435,7 +453,7 @@ body {
   cursor: pointer;
   position: relative;
   z-index: 1;
-  font-size: 18px;
+  font-size: clamp(14px, 2vw, 18px);
 }
 
 .collapse_arrow {
@@ -461,7 +479,7 @@ body {
 
 .collapse_text {
   margin: 0;
-  font-size: 18px;
+  font-size: clamp(14px, 2vw, 18px);
   font-weight: 200;
 }
 
@@ -469,7 +487,7 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
-  font-size: 18px;
+  font-size: clamp(14px, 2vw, 18px);
   font-weight: 200;
 }
 
@@ -521,7 +539,7 @@ body {
   align-items: center;
 }
 
-@media screen and (max-width: 1230px) {
+@media screen and (max-width: 1440px) {
   .home_products {
     gap: 25px;
     padding: 25px 15px;
@@ -544,6 +562,26 @@ body {
   .home_banner {
     height: 170px;
   }
+  .slider_active-picture {
+    height: 200px;
+  }
+  .singleproduct_content {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .singleproduct_rating-and-host {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .rating_icon {
+    height: 25px;
+  }
 }
 
 @media screen and (max-width: 425px) {
@@ -557,6 +595,26 @@ body {
   .home_products_container {
     width: 335px;
     height: 255px;
+  }
+  .singleproduct {
+    margin: 20px auto;
+  }
+  .slider {
+    margin: 20px auto;
+  }
+  .singleproduct_dropdowns {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .collapse {
+    width: 100%;
+  }
+  .about {
+    margin: 20px auto;
+  }
+  .banner {
+    height: 120px;
+    margin: 20px auto;
   }
 }
 
