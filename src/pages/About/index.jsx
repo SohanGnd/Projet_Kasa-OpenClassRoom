@@ -26,10 +26,18 @@ const About = () => {
         <div className="banner_overlay"></div>
       </div>
       <div className="about_dropdowns">
-        <Collapse title="Fiabilité" content={content('fiability')} />
-        <Collapse title="Respect" content={content('respect')} />
-        <Collapse title="Service" content={content('service')} />
-        <Collapse title="Sécurité" content={content('sécurity')} />
+        <div className="about_collapse">
+          <Collapse title="Fiabilité" content={content('fiability')} />
+        </div>
+        <div className="about_collapse">
+          <Collapse title="Respect" content={content('respect')} />
+        </div>
+        <div className="about_collapse">
+          <Collapse title="Service" content={content('service')} />
+        </div>
+        <div className="about_collapse">
+          <Collapse title="Sécurité" content={content('sécurity')} />
+        </div>
       </div>
     </div>
   )
