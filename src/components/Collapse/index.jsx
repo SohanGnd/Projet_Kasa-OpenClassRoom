@@ -16,7 +16,7 @@ const Collapse = ({ title, content }) => {
     }
   }
   return (
-    <div className="collapse ">
+    <div className="collapse" id="collapse_about">
       <button type="button" className="collapse_button" onClick={isCollapse}>
         {title}
 
