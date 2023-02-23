@@ -26,7 +26,7 @@ body {
 .navbar_links {
   display: flex;
   gap: 50px;
-  font-size: clamp(12px, 2.5vw, 24px);
+  font-size: clamp(15px, 2.5vw, 24px);
 }
 
 .navbar_links--active {
@@ -143,7 +143,7 @@ body {
 .home_products_title {
   position: absolute;
   bottom: 0;
-  font-size: clamp(12px, 3vw, 18px);
+  font-size: clamp(15px, 3vw, 18px);
   font-weight: 500;
   margin: 15px 20px;
   color: #fff;
@@ -420,7 +420,7 @@ body {
   margin: 40px auto;
 }
 
-#collapse_about {
+div.collapse_about {
   width: 95%;
   margin: 0 auto;
 }
@@ -576,6 +576,10 @@ body {
   .home_banner {
     height: 170px;
   }
+  .home_products_container {
+    max-width: 95%;
+    margin: 0 auto;
+  }
   .slider_active-picture {
     height: 200px;
   }
@@ -618,8 +622,7 @@ body {
     margin-bottom: 20px;
   }
   .home_products_container {
-    width: 335px;
-    height: 255px;
+    height: 232px;
   }
   .singleproduct {
     margin: 20px auto;
