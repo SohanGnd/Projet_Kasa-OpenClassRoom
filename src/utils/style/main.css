@@ -121,9 +121,20 @@ body {
   margin: 0 auto;
 }
 
-.home_products_container {
+.home_products_single {
   width: 340px;
   height: 340px;
+}
+
+.home_products_link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.home_products_container {
+  width: 100%;
+  height: 100%;
   cursor: pointer;
   position: relative;
   border-radius: 10px;
@@ -576,8 +587,8 @@ div.collapse_about {
   .home_banner {
     height: 170px;
   }
-  .home_products_container {
-    max-width: 95%;
+  .home_products_single {
+    width: 95%;
     margin: 0 auto;
   }
   .slider_active-picture {
@@ -621,7 +632,7 @@ div.collapse_about {
     height: 120px;
     margin-bottom: 20px;
   }
-  .home_products_container {
+  .home_products_single {
     height: 232px;
   }
   .singleproduct {
