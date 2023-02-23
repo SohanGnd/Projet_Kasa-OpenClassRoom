@@ -13,8 +13,11 @@ function Home() {
         <section className="home_products">
           {products.map((product) => {
             return (
-              <article key={product.id}>
-                <Link to={`/products/${product.id}`}>
+              <article key={product.id} className="home_products_single">
+                <Link
+                  to={`/products/${product.id}`}
+                  className="home_products_link"
+                >
                   <Thumbnails image={product.cover} title={product.title} />
                 </Link>
               </article>
