@@ -1,5 +1,10 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from 'react-router-dom'
 
 // Pages by React BrowserRouter //
 import About from '../pages/About'
@@ -28,6 +33,7 @@ function RoutesPath() {
         <Route>
           <Error />
         </Route>
+        <Redirect to="../components/Error" />
       </Switch>
       <Footer />
     </Router>

@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom'
+import { useParams, Redirect } from 'react-router-dom'
 import products from '../../mocks/data.json'
 
 import Rating from '../../components/Rating'
@@ -7,9 +7,18 @@ import Slider from '../../components/Slider'
 import Tags from '../../components/Tags'
 import Collapse from '../../components/Collapse'
 
+function isValidId(id) {
+  return products.some((product) => product.id === id)
+}
+
 const SingleProduct = () => {
   const { productId } = useParams()
   const product = products.find((product) => product.id === productId)
+
+  if (!isValidId(productId)) {
+    return <Redirect to="../../components/Error" />
+  }
+
   const { title, location, rating, host, equipments, description, pictures } =
     product
 
