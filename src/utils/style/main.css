@@ -92,7 +92,6 @@ body {
 
 .home_banner_title {
   position: absolute;
-  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
   font-size: clamp(20px, 4vw, 48px);
